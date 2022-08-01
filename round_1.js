@@ -61,6 +61,7 @@ function myMemoize(fn, context) {
     //this args cache will contain all of these arguments
     if (!res[argsCache]) {
       //if we don't have this argument inside this object
+      //res[9467, 7649]
       res[argsCache] = fn.call(context || this, ...args); //context is optional, if don't exist use current contetxt
     }
     return res[argsCache];
